@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "skills": {
+    "clerk-nextjs-patterns": {
+      "source": "clerk/skills",
+      "sourceType": "github",
+      "skillPath": "skills/frameworks/clerk-nextjs-patterns/SKILL.md",
+      "computedHash": "6c5b897dcef62550436b24b3cc9087658dd97c9ca88272ab48a5c094276d72fb"
+    },
+    "clerk-setup": {
+      "source": "clerk/skills",
+      "sourceType": "github",
+      "skillPath": "skills/core/clerk-setup/SKILL.md",
+      "computedHash": "a35fe4e4d03a71825d9880c9cd76ddcae536beed535a2be44908117b4661e749"
+    },
+    "conventional-commits": {
+      "source": "dgalarza/claude-code-workflows",
+      "sourceType": "github",
+      "skillPath": "plugins/conventional-commits/skills/conventional-commits/SKILL.md",
+      "computedHash": "9933c4ed8509de60bb0554305d9cda44cc2c35f39f2f1c5d79a8e7b551c402fa"
+    },
+    "nextjs": {
+      "source": "vercel/vercel-plugin",
+      "sourceType": "github",
+      "skillPath": "skills/nextjs/SKILL.md",
+      "computedHash": "d3a48eada4dbae95856d643a0c9c54a38974ee7896a4d34f93aead13d26c343a"
+    },
+    "postgres-drizzle": {
+      "source": "ccheney/robust-skills",
+      "sourceType": "github",
+      "skillPath": "skills/postgres-drizzle/SKILL.md",
+      "computedHash": "60534e1aa880981e26360db836115df77a8e73be219c7a027e635802686b5bd9"
+    },
+    "shadcn": {
+      "source": "vercel/vercel-plugin",
+      "sourceType": "github",
+      "skillPath": "skills/shadcn/SKILL.md",
+      "computedHash": "4d966b8dbf5b7396ade1c8aeb2f6500aebbee70819110545e9f278b80d2bfdf1"
+    },
+    "zod": {
+      "source": "pproenca/dot-skills",
+      "sourceType": "github",
+      "skillPath": "skills/.curated/zod/SKILL.md",
+      "computedHash": "c69b5133b65643317236707f2cd3e521b4fc6e5ee5fd6c6c00cf62a37dfd0144"
+    }
+  }
+}
