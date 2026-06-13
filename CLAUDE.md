@@ -64,6 +64,10 @@ docs/requirements/        # 要件・受け入れ条件（requirements スキル
 - **Zod**: 入力スキーマは `lib/validations/`。Server Actions の入口で必ず検証する。
 - **Clerk**: 認証は `middleware.ts` で保護。どの画面を保護するか明記する。
 - **テスト**: フロントの component 単体テストは書かない（UI の正しさは E2E で担保）。
+- **ローカル DB のポート**: ホスト側ポートは環境変数 **`DB_PORT`（既定 5432）の 1 か所**で決める。
+  `docker-compose.yml` は `"${DB_PORT:-5432}:5432"`、`.env.example` の `DATABASE_URL` は `localhost:${DB_PORT}` を参照する。
+  **5432 が他で使用中なら、より大きい空きポート（5433, 5434…）に変える**。`dev-server` スキルが起動時に空きを自動探索し `DB_PORT` を `export` するので、docker・マイグレーション・`pnpm dev` が同じポートでそろう。
+  scaffold 時、`drizzle.config.ts` など Node スクリプトで `.env` を読むときは、`${DB_PORT}` 参照を展開できるよう **dotenv + dotenv-expand**（または `@next/env`）で読み込むこと（Next.js 本体は既定で展開する）。
 
 ## 開発ルール
 

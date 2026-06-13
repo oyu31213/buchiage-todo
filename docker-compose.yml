@@ -7,8 +7,10 @@ services:
       POSTGRES_USER: todo
       POSTGRES_PASSWORD: todo
       POSTGRES_DB: todo
+    # ホスト側ポートは DB_PORT で可変（既定 5432）。5432 が使用中なら DB_PORT=5433 等で起動する。
+    # コンテナ内は常に 5432。DATABASE_URL（.env.local）も同じ DB_PORT を参照させること。
     ports:
-      - "5432:5432"
+      - "${DB_PORT:-5432}:5432"
     volumes:
       - todo_db_data:/var/lib/postgresql/data
     healthcheck:
